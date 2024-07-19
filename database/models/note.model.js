@@ -5,7 +5,7 @@ import { Schema, Types, model } from "mongoose";
 const schema =new Schema({
     title:String,
     desc:String,
-    user:{
+    createdBy:{
         type:Types.ObjectId,
         ref:"User"
     },

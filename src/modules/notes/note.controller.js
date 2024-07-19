@@ -11,7 +11,7 @@ const addNote=catchError(async (req,res)=>{
 
 
 const findNote =catchError(async (req,res)=>{
-    const note =  await Note.find({user:req.user.userId}).populate("user")
+    const note =  await Note.find().populate('createdBy')
     res.status(201).json({message:"Founded",note})
 })
 
