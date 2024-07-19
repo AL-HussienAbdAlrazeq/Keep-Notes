@@ -9,7 +9,7 @@ import Joi from "joi";
 const updateNoteVal = Joi.object({
     title:Joi.string().min(5).max(1000),
     desc:Joi.string().min(5).max(3000),
-    id:Joi.string().hex().required()
+    id:Joi.string().hex().length(24).required()
 })
 
 
